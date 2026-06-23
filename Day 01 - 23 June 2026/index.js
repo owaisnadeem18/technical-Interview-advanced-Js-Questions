@@ -36,33 +36,59 @@
 
 // Contains Duplicates 
 
-const arr = [1,2,3,1]
+// const arr = [1,2,3,1]
 
-const findDuplicates = (arr) => {
-    const obj = {}
+// const findDuplicates = (arr) => {
+//     const obj = {}
 
 
-    for (let i = 0 ; i < arr.length ; i++) {
+//     for (let i = 0 ; i < arr.length ; i++) {
         
-        const num = arr[i]
+//         const num = arr[i]
 
-        if (obj[num]) {
-            obj[num]++
-            if (obj[num] > 1) {
-                return true
-            }
+//         if (obj[num]) {
+//             obj[num]++
+//             if (obj[num] > 1) {
+//                 return true
+//             }
+//         }
+
+//         else {
+//             obj[num] = 1
+//         }
+
+
+
+        
+//     } 
+    
+//     // return obj
+//     return false
+
+// }
+
+// console.log(findDuplicates(arr))
+
+// more optimized approach : 
+
+const arr = [1,2,3,5]
+
+const findDuplicates = (array) => {
+
+    let obj = {}
+    
+    for (let i of array) {
+        
+        if (obj[i]) {
+            return true 
         }
 
         else {
-            obj[num] = 1
-        }
+            obj[i] = 1
+        } 
 
+    }
 
-
-        
-    } 
-    
-    // return obj
     return false
 
 }
